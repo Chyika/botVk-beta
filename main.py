@@ -129,8 +129,13 @@ while True:
                                      message='Все пруфы можно найти в обсуждениях группы.\nОбсуждения - https://vk.com/board151512230')
 
                     elif response == "статус" and dict_status.get(event.user_id):
+                        if status_buy:
+                            msg = 'Закупка активна'
+                        else:
+                            msg = 'Закупка приостановлена'
+
                         vk.messages.send(peer_id=event.user_id, random_id=random.randint(-2147483648, +2147483648),
-                                     message=str(status_buy))
+                                     message=msg)
 
                     elif response == 'отключить бота' and dict_status.get(event.user_id):
                         dict_status[event.user_id] = False
