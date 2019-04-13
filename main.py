@@ -122,7 +122,7 @@ while True:
 
                     elif response == "продать" and dict_status.get(event.user_id):
                         vk.messages.send(peer_id=event.user_id, random_id=random.randint(-2147483648, +2147483648),
-                                     message='Выберите сумму, которую хотите продать. Обязательно приложите скрин баланса, доказывающий наличии указанной суммы на вашем балансе.', keyboard=keyboard)
+                                     message='Выберите сумму, которую хотите продать. Обязательно приложите скрин, доказывающий наличиe указанной суммы на вашем балансе.', keyboard=keyboard)
 
                     elif response == 'пруфы' and dict_status.get(event.user_id):
                         vk.messages.send(peer_id=event.user_id, random_id=random.randint(-2147483648, +2147483648),
